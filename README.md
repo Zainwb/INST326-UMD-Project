@@ -87,10 +87,6 @@ root.mainloop()
 
 
 
-
-
-
-
 """Importing random library to select random question from the available questions"""
 
 import random
@@ -98,15 +94,15 @@ import random
 """Creating a class to hold the questions along with the correct answer"""
 
 class Ques:
-def __init__(self, ask, ans): #initialise function to assign values to its data members
-self.ask=ask
-self.ans=ans
+    
+    def __init__(self, ask, ans): #initialise function to assign values to its data members
+        self.ask=ask
+        self.ans=ans
 
 """A list that holds all the questions"""
 
 questionbank= [
 "Question 1:\na) 1\nb) 2\nb) 3\nc) d\n",
-"Question 2:\na) 1\nb) 2\nb) 3\nc) d\n",
 "Question 3:\na) 1\nb) 2\nb) 3\nc) d\n",
 "Question 4:\na) 1\nb) 2\nb) 3\nc) d\n",
 
@@ -114,11 +110,11 @@ questionbank= [
 We keep these class objects in a list
 """
 
-ques =[
+Ques =[
 Ques(questionbank[0],"a"),
 Ques(questionbank[1],"b"),
 Ques(questionbank[2],"c"),
-Ques(questionbank[3],"d"),
+Ques(questionbank[3],"d")
 ]
 
 """Define a fuction that keeps track of the marks of the user and picks questions at random from the available questions"""
@@ -132,3 +128,7 @@ marks = marks +1
 print("Score: "+str(marks)+"/3")
 
 quiz(ques)
+
+
+
+
